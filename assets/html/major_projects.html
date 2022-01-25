@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Submit project</title>
 
-		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link rel="icon" sizes="32x32" href="../../favicon.ico" />
-		<link rel="manifest" href="../../manifest.webmanifest" />
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Submit project</title>
 
-		<style>
-			.hide{
-				display: none;
-			}
-		</style>
-	</head>
-	<body>
-		<header id="top" class="text-gray-600 body-font ">
-			<div
-				class="
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="icon" sizes="32x32" href="../../favicon.ico" />
+	<link rel="manifest" href="../../manifest.webmanifest" />
+
+	<style>
+		.hide {
+			display: none;
+		}
+
+		.form-wrapper > *{
+			width: 100%;
+		}
+
+		.form-wrapper form > *{
+			width: 100%;
+		}
+		
+
+	</style>
+</head>
+
+<body>
+	<header id="top" class="text-gray-600 body-font ">
+		<div class="
 					container
 					mx-auto
 					flex flex-wrap
@@ -32,10 +43,8 @@
 					flex-col
 					md:flex-row
 					items-center
-				"
-			>
-				<a
-					class="
+				">
+			<a class="
 						flex
 						title-font
 						font-medium
@@ -43,74 +52,63 @@
 						text-gray-900
 						align-middle
 						md:mb-0
-					"
-					href="../../index.html"
-				>
+					" href="../../index.html">
 				<img src="../img/IEEE RAS LOGO (1).png" class="w-28 h-18" alt="IEEE RAS LOGO">
-				</a>
-				<nav
-					class="
+			</a>
+			<nav class="
 						md:ml-auto
 						flex flex-wrap
 						items-center
 						text-base
 						justify-center
-					"
-				>
-					<a class="mr-5 hover:text-gray-900" href="../../index.html">Home</a>
-					<a class="mr-5 hover:text-gray-900" href="../html/team.html">Our Team</a>
-					<a class="mr-5 hover:text-gray-900" href="../html/learning_path.html">Events</a>
-				</nav>
-				
-		</header>
-		<section class="text-gray-600 body-font relative bg-white pt-10">
-			<div class="container  mx-auto">
-				<div class="flex flex-col text-center w-full mb-12 ">
-					<h1
-						class="
+					">
+				<a class="mr-5 hover:text-gray-900" href="../../index.html">Home</a>
+				<a class="mr-5 hover:text-gray-900" href="../html/team.html">Our Team</a>
+				<a class="mr-5 hover:text-gray-900" href="../html/learning_path.html">Events</a>
+			</nav>
+
+	</header>
+	<section class="text-gray-600 body-font relative bg-white pt-10">
+		<div class="container  mx-auto">
+			<div class="flex flex-col text-center w-full mb-12 ">
+				<h1 class="
 							sm:text-3xl
 							text-2xl
 							font-medium
 							title-font
 							mb-4
 							text-gray-900
-						"
-					>
-						Have an idea? Turn it into reality here
-					</h1>
-					<p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-						Just fill out this form
-					</p>
-				</div>
-				<div class="lg:w-1/2 md:w-2/3 mx-auto">
-					<div class="flex flex-wrap -m-2">
-						<div id="error_msg1" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
-							<p class="font-bold">Oops! something is wrong!</p>
-							<p>Check whether the entered srn and phone number is correct or not and try again</p>
-						</div>
-						<div id="error_msg2" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
-							<p class="font-bold">Server is down!</p>
-							<p>Sorry for the inconvenience, please try again after some time</p>
-<!-- 							<p>You will be redirected to Home Page in 10 secs</p> -->
-						</div>
-						<div id="success_msg" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 w-full hide" role="alert">
-							<p class="font-bold">Your project details has been submitted successfully!</p>
-							<p class="font-bold">If you get selected, you will recieve a mail from us</p>
-<!-- 							<p>You will be redirected to Home Page in 10 secs</p> -->
-						</div>
-						<form accept-charset="UTF-8" action="https://www.formbackend.com/f/8915f37ddb3b5213" method="POST">
+						">
+					Have an idea? Turn it into reality here
+				</h1>
+				<p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+					Just fill out this form
+				</p>
+			</div>
+			<div class="lg:w-1/2 md:w-2/3 mx-auto">
+				<div class="flex flex-wrap -m-2 justify-content-center form-wrapper">
+					<div id="error_msg1" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide"
+						role="alert">
+						<p class="font-bold">Oops! something is wrong!</p>
+						<p>Check whether the entered srn and phone number is correct or not and try again</p>
+					</div>
+					<div id="error_msg2" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide"
+						role="alert">
+						<p class="font-bold">Server is down!</p>
+						<p>Sorry for the inconvenience, please try again after some time</p>
+						<!-- 							<p>You will be redirected to Home Page in 10 secs</p> -->
+					</div>
+					<div id="success_msg"
+						class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 w-full hide" role="alert">
+						<p class="font-bold">Your project details has been submitted successfully!</p>
+						<p class="font-bold">If you get selected, you will recieve a mail from us</p>
+						<!-- 							<p>You will be redirected to Home Page in 10 secs</p> -->
+					</div>
+					<form accept-charset="UTF-8" action="https://www.formbackend.com/f/8915f37ddb3b5213" method="POST">
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
-								<label
-									for="name"
-									class="leading-7 text-sm text-black ml-1 mb-0"
-									>Name</label
-								>
-								<input
-									type="text"
-									id="name"
-									name="name"
-									class="
+								<label for="name" class="leading-7 text-sm text-black ml-1 mb-0">Name</label>
+								<input type="text" id="name" name="name" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -128,22 +126,13 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								/>
+									" required/>
 							</div>
 						</div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
-								<label
-									for="srn"
-									class="leading-7 text-sm text-black ml-1 mb-0"
-									>SRN</label
-								>
-								<input
-									type="text"
-									id="srn"
-									name="srn"
-									class="
+								<label for="srn" class="leading-7 text-sm text-black ml-1 mb-0">SRN</label>
+								<input type="text" id="srn" name="srn" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -161,19 +150,13 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								/>
+									" required />
 							</div>
 						</div>
 						<div class="p-2 w-1/2">
 							<div class="relative">
-								<label
-									for="dept"
-									class="leading-7 text-sm text-black ml-1 mb-0"
-									>Department</label
-								>
-								<select name="dept" id="dept" 
-								class="w-full
+								<label for="dept" class="leading-7 text-sm text-black ml-1 mb-0">Department</label>
+								<select name="dept" id="dept" class="w-full
 								bg-gray-100 bg-opacity-100
 								rounded
 								border border-gray-300
@@ -189,8 +172,7 @@
 								leading-8
 								transition-colors
 								duration-200
-								ease-in-out"
-								>
+								ease-in-out" required>
 									<option></option>
 									<option value="CS">Computer Science</option>
 									<option value="EC">Electronics and Communication</option>
@@ -204,16 +186,8 @@
 						<div class="p-2 w-1/2"></div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
-								<label
-									for="email"
-									class="leading-7 text-sm text-black ml-1 mb-0"
-									>Email</label
-								>
-								<input
-									type="email"
-									id="email"
-									name="email"
-									class="
+								<label for="email" class="leading-7 text-sm text-black ml-1 mb-0">Email</label>
+								<input type="email" id="email" name="email" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -231,22 +205,13 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								/>
+									" />
 							</div>
 						</div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
-								<label
-									for="phone"
-									class="leading-7 text-sm text-black ml-1 mb-0"
-									>Phone Number</label
-								>
-								<input
-									type="text"
-									id="phone"
-									name="phone"
-									class="
+								<label for="phone" class="leading-7 text-sm text-black ml-1 mb-0">Phone Number</label>
+								<input type="text" id="phone" name="phone" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -264,22 +229,13 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								/>
+									" required>
 							</div>
 						</div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
-								<label
-									for="title"
-									class="leading-7 text-sm text-black ml-1 mb-0"
-									>Project Title</label
-								>
-								<input
-									type="text"
-									id="title"
-									name="title"
-									class="
+								<label for="title" class="leading-7 text-sm text-black ml-1 mb-0">Project Title</label>
+								<input type="text" id="title" name="title" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -297,21 +253,14 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								/>
+									" required/>
 							</div>
 						</div>
 						<div class="p-2 w-full">
 							<div class="relative">
-								<label
-									for="requirements"
-									class="leading-7 text-sm text-black mb-0 ml-1"
-									>Hardware Components Required</label
-								>
-								<textarea
-									id="requirements"
-									name="requirements"
-									class="
+								<label for="requirements" class="leading-7 text-sm text-black mb-0 ml-1">Hardware
+									Components Required</label>
+								<textarea id="requirements" name="requirements" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -331,21 +280,14 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								></textarea>
+									" required></textarea>
 							</div>
 						</div>
 						<div class="p-2 w-full">
 							<div class="relative">
-								<label
-									for="description"
-									class="leading-7 text-sm text-black mb-0 ml-1"
-									>Project description</label
-								>
-								<textarea
-									id="description"
-									name="description"
-									class="
+								<label for="description" class="leading-7 text-sm text-black mb-0 ml-1">Project
+									description</label>
+								<textarea id="description" name="description" class="
 										w-full
 										bg-gray-100 bg-opacity-100
 										rounded
@@ -365,13 +307,11 @@
 										transition-colors
 										duration-200
 										ease-in-out
-									"
-								></textarea>
+									" required></textarea>
 							</div>
 						</div>
 						<div class="p-2 w-full">
-							<button
-								class="
+							<button class="
 									flex
 									mx-auto
 									text-white
@@ -383,100 +323,101 @@
 									hover:bg-black
 									rounded
 									text-lg
-								"
-							>
+								">
 								Submit
 							</button>
 						</div>
-						</form>
-					</div>
+					</form>
 				</div>
 			</div>
-		</section>
-		<footer>
-			<div class="container">
-				<p>© IEEE RAS PESU&nbsp;2021. All Rights Reserved.</p>
-				<ul class="list-inline">
-					<li class="list-inline-item"><a href="assets/html/faq.html">FAQ</a></li>
-				</ul>
-				<p>Made with <i class="fa fa-heart"></i> by <span style="color: #fdcc52;">IEEE RAS PESU web dev team</span></p>
-			</div>
-		</footer>
-		<script>
-			const handleClick=(e)=>{
-				e.preventDefault()
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<p>© IEEE RAS PESU&nbsp;2021. All Rights Reserved.</p>
+			<ul class="list-inline">
+				<li class="list-inline-item"><a href="assets/html/faq.html">FAQ</a></li>
+			</ul>
+			<p>Made with <i class="fa fa-heart"></i> by <span style="color: #fdcc52;">IEEE RAS PESU web dev team</span>
+			</p>
+		</div>
+	</footer>
+	<script>
+		const handleClick = (e) => {
+			e.preventDefault()
 
-				let error_msg1=document.getElementById("error_msg1")
-				let error_msg2=document.getElementById("error_msg2")
-				let success_msg=document.getElementById("success_msg")
-				let name=document.getElementById("name")
-				let srn=document.getElementById("srn")
-				let dept=document.getElementById("dept")
-				let email=document.getElementById("email")
-				let title=document.getElementById("title")
-				let requirements=document.getElementById("requirements")
-				let description=document.getElementById("description")
-				let phone=document.getElementById("phone")
-				
-				let details={
-					"name":name.value,
-					"email":email.value,
-					"srn":srn.value,
-					"phone":phone.value,
-					"department":dept.value,
-					"project_title":title.value,
-					"project_description":description.value,
-					"components":requirements.value
+			let error_msg1 = document.getElementById("error_msg1")
+			let error_msg2 = document.getElementById("error_msg2")
+			let success_msg = document.getElementById("success_msg")
+			let name = document.getElementById("name")
+			let srn = document.getElementById("srn")
+			let dept = document.getElementById("dept")
+			let email = document.getElementById("email")
+			let title = document.getElementById("title")
+			let requirements = document.getElementById("requirements")
+			let description = document.getElementById("description")
+			let phone = document.getElementById("phone")
+
+			let details = {
+				"name": name.value,
+				"email": email.value,
+				"srn": srn.value,
+				"phone": phone.value,
+				"department": dept.value,
+				"project_title": title.value,
+				"project_description": description.value,
+				"components": requirements.value
+			}
+			// console.log(details)
+			// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+			const apiUrl = 'http://157.245.78.79/mega-projects/';
+			fetch(apiUrl, {
+				method: "POST",
+				body: JSON.stringify(details),
+				headers: {
+					"Content-type": "application/json; charset=UTF-8"
 				}
-				// console.log(details)
-				// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-				const apiUrl = 'http://157.245.78.79/mega-projects/';
-				fetch(apiUrl, {
-     				method: "POST",
-					body: JSON.stringify(details),
-					headers: {
-						"Content-type": "application/json; charset=UTF-8"
-					}
-				})
+			})
 				.then(response => {
 					response.json();
-					if(response.status===422 || response.status===400){
+					if (response.status === 422 || response.status === 400) {
 						window.location.href = "#top";
 						success_msg.classList.add("hide");
 						error_msg2.classList.add("hide");
 						error_msg1.classList.remove("hide");
 					}
-					else if(response.status===404){
+					else if (response.status === 404) {
 						window.location.href = "#top";
 						success_msg.classList.add("hide");
 						error_msg1.classList.add("hide");
 						error_msg2.classList.remove("hide");
-// 						setTimeout(()=>{
-// 							window.location.href = "/website/index.html";
-// 						},10000)
+						// 						setTimeout(()=>{
+						// 							window.location.href = "/website/index.html";
+						// 						},10000)
 					}
-					else{
+					else {
 						window.location.href = "#top";
 						error_msg1.classList.add("hide")
 						error_msg2.classList.add("hide")
-						success_msg.classList.remove("hide");	
-// 						setTimeout(()=>{
-// 							window.location.href = "/website/index.html";
-// 						},10000)
+						success_msg.classList.remove("hide");
+						// 						setTimeout(()=>{
+						// 							window.location.href = "/website/index.html";
+						// 						},10000)
 					}
 				})
-				.catch(err=>{
+				.catch(err => {
 					console.log(err);
 					window.location.href = "#top";
 					success_msg.classList.add("hide");
 					error_msg1.classList.add("hide");
 					error_msg2.classList.remove("hide");
-// 					setTimeout(()=>{
-// 							window.location.href = "/website/index.html";
-// 						},10000)
+					// 					setTimeout(()=>{
+					// 							window.location.href = "/website/index.html";
+					// 						},10000)
 				})
 
-			}
-		</script>
-	</body>
+		}
+	</script>
+</body>
+
 </html>
