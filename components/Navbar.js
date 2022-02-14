@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -24,21 +25,18 @@ const Navbar = () => {
 
 				<div
 					onClick={() => setOpen(!open)}
-					className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+					className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
 				>
 					<ion-icon name={open ? "close" : "menu"}></ion-icon>
 				</div>
 
 				<ul
-					className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-ourBlack  md:bg-white md:z-auto  left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+					className={`text-sm md:text-lg lg:flex lg:items-center lg:pb-0  absolute lg:static bg-ourBlack  lg:bg-white lg:z-auto z-[1]  left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${
 						open ? "top-20 " : "top-[-490px]"
 					}`}
 				>
 					{Links.map((link) => (
-						<li
-							key={link.name}
-							className="md:ml-8 text-md md:my-0 my-7"
-						>
+						<li key={link.name} className="lg:ml-8 lg:my-0 my-5">
 							<Link href={link.link}>
 								<a className="text-white lg:hover:text-white lg:hover:bg-ourPurple lg:hover:px-3 lg:hover:py-2 hover:rounded-md lg:text-ourBlack duration-500">
 									{link.name}
