@@ -1,3 +1,10 @@
+/* eslint-disable @next/next/no-sync-scripts */
+import Head from "next/head";
+
 export default function Home() {
-	return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+	return (
+		<div>
+			<p>Lorem1000</p>
+		</div>
+	);
 }
