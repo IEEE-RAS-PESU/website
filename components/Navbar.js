@@ -14,12 +14,12 @@ const Navbar = () => {
 	];
 	let [open, setOpen] = useState(false);
 	return (
-		<div className="shadow-md w-full top-0 left-0">
-			<div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
+		<div className="w-full absolute">
+			<div className="md:flex items-center justify-between py-4 md:px-10 px-7">
 				<Image
-					src="/logos/ieee-ras-logo.png"
-					width={150}
-					height={60}
+					src="/logos/ieee_ras_logo_2.png"
+					width={300}
+					height={150}
 					alt="IEEE logo"
 				></Image>
 
@@ -31,14 +31,14 @@ const Navbar = () => {
 				</div>
 
 				<ul
-					className={`text-sm md:text-lg lg:flex lg:items-center lg:pb-0  absolute lg:static bg-ourBlack  lg:bg-white lg:z-auto z-[1]  left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${
-						open ? "top-20 " : "top-[-490px]"
+					className={`text-sm md:text-lg lg:flex lg:items-center lg:pb-0  absolute lg:static lg:z-auto z-[1]  left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${
+						open ? "top-20 bg-ourBlack" : "top-[-490px]"
 					}`}
 				>
 					{Links.map((link) => (
 						<li key={link.name} className="lg:ml-8 lg:my-0 my-5">
 							<Link href={link.link}>
-								<a className="text-white lg:hover:text-white lg:hover:bg-ourPurple lg:hover:px-3 lg:hover:py-2 hover:rounded-md lg:text-ourBlack duration-500">
+								<a className="p-3 text-white text-sm hover:bg-ourBlack  hover:rounded-md duration-500">
 									{link.name}
 								</a>
 							</Link>
