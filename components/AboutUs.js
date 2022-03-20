@@ -41,7 +41,7 @@ export default function AboutUs() {
                             <li>
                                 <CheckIcon className="h-8 w-8 text-ourRed"/>
                             </li>
-                            <li>It is advancing innovation and technological excellence for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities.</li>
+                            <li>Being the PESU chapter, IEEE RAS PESU aims to promote diligent growth amongst the students of PES University about various fields of Robotics and Automation. The club conducts hands-on workshops, guest seminars,lectures and industrial visits to various Robotics Research Labs. The club also has various ongoing mega projects, which are mentored by the core team members and faculty members that students are allowed to join to work on them.</li>
                         </ul>
                     </li>
 
