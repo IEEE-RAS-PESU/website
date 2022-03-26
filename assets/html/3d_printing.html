@@ -28,6 +28,17 @@
         textarea {
             resize: none;
         }
+
+        @media only screen and (max-width: 680px) {
+        #content-section {
+            flex-direction: column;
+            gap: 0;
+            margin: 2rem;
+        }
+        #landing {
+            height: 100vh;
+        }
+}
 		
 
 	</style>
@@ -71,34 +82,43 @@
 			</nav>
 
 	</header>
-    <div class="backdrop-opacity-100 h-1/3 w-full bg-[url('../img/3dprint2.jpg')] bg-cover bg-center text-white flex flex-column justify-content-center text-left px-32">
+    <div id="landing" class="backdrop-opacity-100 h-1/2 w-full bg-[url('../img/3dprint2.jpg')] bg-cover bg-center text-white flex flex-column justify-content-center text-left px-32">
         <h1 class="text-7xl font-extrabold text-transparent text-white">
             3D Printing Now Available !
         </h1>
         <p>Give life to your CAD models!</p>
     </div>
-    <div class="flex align-items-start text-left justify-content-between gap-64 p-32">
+    <div id="content-section" class="flex align-items-start text-left justify-content-between gap-64 md:p-32">
         <div>
             <h1 class="text-3xl border-bottom w-auto inline py-1">3D Printing at IEEE RAS PESU</h1>
             <p class="my-10">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, cupiditate earum perferendis error, aspernatur alias molestias esse quibusdam ipsum pariatur similique sunt aut, dolores atque?
+                IEEE RAS PESU now has <b>Creality Ender 3 S1</b> and <b>Creality CR10 V3</b> 3D Printers! Filament used is <b>PLA filaments</b>.
             </p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aut nihil accusantium, reiciendis itaque modi quia qui nesciunt harum vero culpa vitae veritatis quam dolor dolore, atque corporis, quod quo ipsam vel hic. Fugiat amet quam eveniet? Id enim magni, numquam ea harum pariatur totam est quaerat, architecto rem animi.</p>
+            <p>
+                The following are the terms and conditions:
+            </p>
+            <ul class="list-disc p-10 text-lg">
+
+                <li>Slot will be alloted based on the number of printing hours.</li>
+                <li>Maximum printing hours is <b>24 hours</b>.</li>
+                <li>Filament limit is <b>100g</b> per model.</li>
+                <li>The file format accepted is <b>STL</b>. For multiple files, send an archive of STL file.</li>
+            </ul>
         </div>
-        <form class="w-full max-w-lg">
+        <form class="w-full max-w-lg" accept-charset="UTF-8" action="https://www.formbackend.com/f/9900c2013359f7eb" method="POST" enctype="multipart/form-data">
             <legend class="">3D Print Application</legend>
             <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 Name
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" name="name">
             </div>
             <div class="w-full md:w-1/2 px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                 SRN
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="PES...">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="PES..." name="srn">
             </div>
             </div>
             <div class="flex flex-wrap -mx-3 mb-6">
@@ -106,13 +126,13 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Email
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="email" placeholder="name@gmail.com">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="email" placeholder="name@gmail.com" name="email">
                 </div>
                 <div class="w-full md:w-1/2 px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                     Phone
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="tel" placeholder="1234..">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="tel" placeholder="1234.." name="phone">
                 </div>
             </div>
             <div class="flex flex-wrap -mx-3 mb-6">
@@ -120,14 +140,14 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                     Year
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" placeholder="2">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" placeholder="2" name="year">
                 </div>
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                     Department
                 </label>
                 <div class="relative">
-                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="department">
                     <option>CSE</option>
                     <option>ECE</option>
                     <option>ME</option>
@@ -146,13 +166,13 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     File Dimensions (in mm)
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="l*b*h">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="l*b*h" name="dimensions">
                 </div>
                 <div class="w-full md:w-1/2 px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                     Infill %
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="%">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="%" name="infill">
                 </div>
             </div>
             <div class="flex flex-wrap -mx-3 mb-6">
@@ -160,21 +180,30 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Date
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="date">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="date" name="date">
                 </div>
                 <div class="w-full md:w-1/2 px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                     Time
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="time">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="time" name="time">
                 </div>
             </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                    STL File
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="file" id="my_files" name="my_files[]">
+                </div>
+            </div>
+            
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                     Assistance/Support
                 </label>
-                <textarea class="w-full h-32 bg-gray-200 text-gray-700 border border-gray-200 rounded px-2 py-3 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 resize-none" placeholder="Need any help?"></textarea>
+                <textarea class="w-full h-32 bg-gray-200 text-gray-700 border border-gray-200 rounded px-2 py-3 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 resize-none" placeholder="Need any help?" name="support"></textarea>
                 </div>
             </div>
             <button type="Submit" class="bg-gray-200 p-2 rounded text-gray-700">Submit</button>
