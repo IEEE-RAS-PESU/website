@@ -18,6 +18,9 @@ module.exports = {
 
 				circleGray: "#f3f4f6"
 			},
+			fontFamily: {
+				Roboto: ["Roboto",]
+			}
 		},
 	},
 	plugins: [],

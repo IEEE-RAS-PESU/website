@@ -14,12 +14,12 @@ const Navbar = () => {
 	];
 	let [open, setOpen] = useState(false);
 	return (
-		<div className="w-full absolute">
+		<div className="w-full absolute bg-white text-black">
 			<div className="md:flex items-center justify-between py-4 md:px-10 px-7">
 				<Image
 					src="/logos/ieee_ras_logo_2.png"
-					width={300}
-					height={150}
+					width={250}
+					height={125}
 					alt="IEEE logo"
 				></Image>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
 					{Links.map((link) => (
 						<li key={link.name} className="lg:ml-8 lg:my-0 my-5">
 							<Link href={link.link}>
-								<a className="p-3 text-white text-sm hover:bg-ourBlack  hover:rounded-md duration-500">
+								<a className="p-3 text-black text-sm hover:bg-ourBlack hover:text-white  hover:rounded-md duration-500">
 									{link.name}
 								</a>
 							</Link>
