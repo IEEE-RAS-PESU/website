@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Escape from Hawkins</title>
+
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="icon" sizes="32x32" href="../../favicon.ico" />
+	<link rel="manifest" href="../../manifest.webmanifest" />
+
+	<style>
+		.hide {
+			display: none;
+		}
+
+		.form-wrapper > *{
+			width: 100%;
+		}
+
+		.form-wrapper form > *{
+			width: 100%;
+		}
+        textarea {
+            resize: none;
+        }
+
+        @media only screen and (max-width: 680px) {
+        #content-section {
+            flex-direction: column;
+            gap: 0;
+            margin: 2rem;
+        }
+        #landing {
+            height: 100vh;
+        }
+}
+		
+
+	</style>
+</head>
+
+<body>
+	<header id="top" class="text-gray-600 body-font ">
+		<div class="
+					container
+					mx-auto
+					flex flex-wrap
+					pr-5
+					pl-5
+					pt-3
+					pb-3
+					flex-col
+					md:flex-row
+					items-center
+				">
+			<a class="
+						flex
+						title-font
+						font-medium
+						items-center
+						text-gray-900
+						align-middle
+						md:mb-0
+					" href="../../index.html">
+				<img src="../img/IEEE RAS LOGO (1).png" class="w-28 h-18" alt="IEEE RAS LOGO">
+			</a>
+			<nav class="
+						md:ml-auto
+						flex flex-wrap
+						items-center
+						text-base
+						justify-center
+					">
+				<a class="mr-5 hover:text-gray-900" href="../../index.html">Home</a>
+				<a class="mr-5 hover:text-gray-900" href="../html/team.html">Our Team</a>
+				<a class="mr-5 hover:text-gray-900" href="../html/learning_path.html">Events</a>
+			</nav>
+
+	</header>
+    
+	<div id="landing" class="backdrop-opacity-100 h-1/2 w-full bg-[url('../img/hawkins1.jpg')] bg-cover text-white flex flex-column justify-content-center text-left md:px-32 px-5">
+        <h1 class="text-7xl font-extrabold text-transparent text-[#ED0000]">
+            Escape from Hawkins
+        </h1>
+        <p>Gather your powers, put on your running shoes and escape from Hawkins before the Mindflayer gets to you! <b>Register individually</b>.
+		</p>
+    </div>
+    <div id="content-section" class="flex align-items-start text-left justify-content-between gap-64 md:px-16 md:py-16">
+			<div>
+				<h1 class="text-3xl font-extrabold text-transparent text-[#ED0000] w-auto inline py-1">Notice</h1>
+				<p class="my-10">
+					You will be equipped with the necessary resources and knowledge at our offline workshop, which is compulsory for beginners, after which a problem statement will be provided. You will have 24 hours to submit your answers. 
+				</p>
+				<p>
+					The entire event will be held online except for the workshop. Refer to the brochure for a detailed timeline of the events.
+				</p>
+			</div>
+			
+
+        <form id="code-form" class="w-full max-w-lg md:w-1/2 mb-6 md:mb-0 md:my-0 my-20" method="POST" accept-charset="UTF-8">
+            <legend class="text-[#ED0000]">Got a code ?</legend>
+                <input required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="code-input" type="text" name="name" placeholder="code">
+				<button type="Submit" class="bg-gray-200 p-2 rounded text-gray-700">Submit</button>
+        </form>
+    </div>
+	<div class="p-16">
+		<h1 class="text-3xl font-extrabold text-transparent text-[#ED0000] w-auto inline py-1 mb-4">Timeline</h1>
+		<ol class="sm:flex my-10">
+			<li class="relative mb-6 sm:mb-0 flex flex-column justify-start">
+				<div class="flex items-center">
+					<div class="flex z-10 justify-center items-center w-6 h-6 bg-red-400 rounded-full ring-0 ring-white shrink-0">
+						<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+					</div>
+					<div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+				</div>
+				<div class="mt-3 sm:pr-8">
+					<h3 class="text-lg font-semibold text-gray-900">Registration closes</h3>
+					<time class="block mb-2 text-sm font-normal leading-none text-gray-400">on June 4th, 2022</time>
+					<p class="text-base font-normal text-gray-500 ">Individual registrations only.</p>
+				</div>
+			</li>
+			<li class="relative mb-6 sm:mb-0 flex flex-column justify-start">
+				<div class="flex items-center">
+					<div class="flex z-10 justify-center items-center w-6 h-6 bg-red-400 rounded-full ring-0 ring-white shrink-0">
+						<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+					</div>
+					<div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+				</div>
+				<div class="mt-3 sm:pr-8">
+					<h3 class="text-lg font-semibold text-gray-900">Releasing Resources</h3>
+					<time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">on June 6th, 2022</time>
+					<p class="text-base font-normal text-gray-500 ">3:45 PM - 5:00 PM Seminar hall ground floor.</p>
+				</div>
+			</li>
+			<li class="relative mb-6 sm:mb-0 flex flex-column justify-start">
+				<div class="flex items-center">
+					<div class="flex z-10 justify-center items-center w-6 h-6 bg-red-400 rounded-full ring-0 ring-white shrink-0">
+						<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+					</div> 
+					<div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+				</div>
+				<div class="mt-3 sm:pr-8">
+					<h3 class="text-lg font-semibold text-gray-900">Problem statement release</h3>
+					<time class="block mb-2 text-sm font-normal leading-none text-gray-400">6:00 PM June 11th, 2022</time>
+					<p class="text-base font-normal text-gray-500">Get started with the first problem statement.</p>
+				</div>
+			</li>
+			<li class="relative mb-6 sm:mb-0 flex flex-column justify-start">
+				<div class="flex items-center">
+					<div class="flex z-10 justify-center items-center w-6 h-6 bg-red-400 rounded-full ring-0 ring-white shrink-0">
+						<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+					</div> 
+					<div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+				</div>
+				<div class="mt-3 sm:pr-8">
+					<h3 class="text-lg font-semibold text-gray-900">Submissions</h3>
+					<time class="block mb-2 text-sm font-normal leading-none text-gray-400">11:59 PM June 12th, 2022</time>
+					<p class="text-base font-normal text-gray-500">Submit your solution to the problem statement.</p>
+				</div>
+			</li>
+			<li class="relative mb-6 sm:mb-0 flex flex-column justify-start">
+				<div class="flex items-center">
+					<div class="flex z-10 justify-center items-center w-6 h-6 bg-red-400 rounded-full ring-0 ring-white shrink-0">
+						<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+					</div> 
+				</div>
+				<div class="mt-3 sm:pr-8">
+					<h3 class="text-lg font-semibold text-gray-900">Results</h3>
+					<time class="block mb-2 text-sm font-normal leading-none text-gray-400">1:00 PM June 14th, 2022</time>
+					<p class="text-base font-normal text-gray-500">Announcing results on social media platform.</p>
+				</div>
+			</li>
+		</ol>
+	</div>
+
+	<div id="popup" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+
+		<div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+	
+		<div class="fixed z-10 inset-0 overflow-y-auto">
+			<div class="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
+
+				<div class="relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full">
+				<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+					<div class="sm:flex sm:items-start">
+					<div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+						<h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Congratulation! Here is the next problem statement: </h3>
+						<div class="mt-2">
+						<p class="text-sm text-gray-500" id="popup-content">Yo!</p>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+					<button type="button" id="popup-btn" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">Got it</button>
+					</div>
+				</div>
+			</div>
+		</div>
+  	</div>
+  
+
+    <footer>
+        <div class="container">
+            <p>© IEEE RAS PESU&nbsp;2021. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="assets/html/faq.html">FAQ</a></li>
+            </ul>
+            <p>Made with <i class="fa fa-heart"></i> by <span style="color: #fdcc52;">IEEE RAS PESU Web Dev Team</span></p>
+        </div>
+    </footer>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script>
+		const popup = document.getElementById("popup")
+		const popupButton = document.getElementById("popup-btn")
+		const popupContent = document.getElementById("popup-content")
+		const codeInput = document.getElementById("code-input")
+		const codeForm = document.getElementById("code-form")
+
+		codeForm.addEventListener("submit", e => {
+			e.preventDefault()
+			const code = codeInput.value
+			
+			const data = {code}
+
+			axios.post('https://hawkins-backend.rohanjnr445481.workers.dev', data)
+				.then(function (response) {
+					popupContent.innerText = response.data.content
+					popup.classList.remove("hidden")
+				})
+				.catch(function (error) {
+					if (error.response.status == 404) {
+						alert("Invalid code !")
+					}
+			});
+		})
+
+		popupButton.addEventListener("click", e => {
+			popup.classList.add("hidden")
+		})
+
+	</script>
+</body>
+
+</html>
