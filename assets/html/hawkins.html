@@ -104,8 +104,9 @@
 
         <form id="code-form" class="w-full max-w-lg md:w-1/2 mb-6 md:mb-0 md:my-0 my-20" method="POST" accept-charset="UTF-8">
             <legend class="text-[#ED0000]">Got a code ?</legend>
-                <input required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="code-input" type="text" name="name" placeholder="code">
-				<button type="Submit" class="bg-gray-200 p-2 rounded text-gray-700">Submit</button>
+			<input required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name-input" type="text" name="name" placeholder="Team Name">
+			<input required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="code-input" type="text" name="code" placeholder="code">
+			<button type="Submit" class="bg-gray-200 p-2 rounded text-gray-700">Submit</button>
         </form>
     </div>
 	<div class="p-16">
@@ -225,20 +226,27 @@
     </footer>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script>
+		const headers = {
+			'Content-Type': 'application/json',
+		}
+
 		const popup = document.getElementById("popup")
 		const popupButton = document.getElementById("popup-btn")
 		const popupContent = document.getElementById("popup-content")
 		const popupResourceLink = document.getElementById("resource-link")
 		const codeInput = document.getElementById("code-input")
+		const nameInput = document.getElementById("name-input")
 		const codeForm = document.getElementById("code-form")
 
 		codeForm.addEventListener("submit", e => {
 			e.preventDefault()
 			const code = codeInput.value
+			const name = nameInput.value
 			
-			const data = {code}
+			const data = {code, name}
+			
 
-			axios.post('https://hawkins-backend.rohanjnr445481.workers.dev', data)
+			axios.post('https://hawkins-backend.rohanjnr445481.workers.dev', data, {headers: headers})
 				.then(function (response) {
 					popupContent.innerText = response.data.content
 					popupResourceLink.href = response.data.resource
