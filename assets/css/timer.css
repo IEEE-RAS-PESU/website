@@ -16,8 +16,11 @@
 }
 
 #clockdiv{
+	
 	color: #fff;
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	font-weight: 100;
 	text-align: center;
 	font-size: 30px;
@@ -74,11 +77,16 @@
 		margin: 0 1.5rem;
 	}
   } 
-  @media screen and (max-width: 782px) {
+  @media screen and (max-width: 400px) {
 	
-	#wrapper {
-		/* padding: 30px; */
-		/* margin: 176px 0rem 0px 0rem; */
+	#clockdiv div {
+		/* height: 140px;
+		width: 80px; */
+		margin: 10px 10px;
+	}
+
+	#wrapper{
+		margin-top: 100px;
 	}
   } 
 
@@ -88,7 +96,10 @@
 }
 
 #particles-js{
-	background-color: black;
+	background: black;
+	background-image:url('../img/robofest_background1.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: 50%;
 	position: relative;
 	height: 100%;
 	width: 100%;
