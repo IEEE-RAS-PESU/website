@@ -1,8 +1,12 @@
 let form = document.querySelector("form");
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log("Submitted");
+function register(){
+
+    if(form.checkValidity() === false){
+        form.reportValidity();   
+        return; 
+    }
+
     let data = new FormData(form)
     Swal.fire({
         title:'Submitting...',
@@ -21,8 +25,15 @@ form.addEventListener('submit', (e) => {
             'success'
             ).then(function() {
                 form.reset();
-                window.location = "/website";
+                window.location = "/index.html";
             });
         
     })
-})
+}
+
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+    
+// })
