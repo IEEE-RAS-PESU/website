@@ -29,5 +29,12 @@ form.addEventListener('submit', (e) => {
                 window.location = "/website";
             });
         
+    }).catch(err => {
+        Swal.fire(
+            'Oops! Something went wrong',
+            'Try again',
+            'error'
+            )
+
     })
 })
