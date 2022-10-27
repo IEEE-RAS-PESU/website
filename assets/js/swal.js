@@ -21,7 +21,7 @@ form.addEventListener('submit', (e) => {
             'success'
             ).then(function() {
                 form.reset();
-                window.location = "/website";
+                window.location = "/index.html";
             });
         
     })

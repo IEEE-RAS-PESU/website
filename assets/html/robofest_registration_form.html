@@ -7,9 +7,8 @@
     <meta name="description" content="IEEE RAS PESU STUDENT CHAPTER is the society of Robotics and Automation under Institute of Electrical and Electronics Engineers(IEEE) for PES University, Bangalore, India.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/timer.css">
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
@@ -19,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
     <link rel="icon" sizes="32x32" href="../../favicon.ico">
-    <link rel="manifest" href="../../manifest.webmanifest">
+    <link rel="manifest" href="../../manifest.webmanifest"> -->
     <link rel="stylesheet" href="../css/robofest_registration_form.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
@@ -84,7 +83,7 @@
                             <div class="name">Email<span style="color: red;">*</span></div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email1" required>
+                                    <input class="input--style-5" type="email" name="email1"  required>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +163,7 @@
                             <div class="name">Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="name3">
+                                    <input class="input--style-5" id="name3" type="text" name="name3">
                                 </div>
                             </div>
                         </div>
@@ -172,7 +171,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email3">
+                                    <input class="input--style-5" type="email" id="email3" name="email3">
                                 </div>
                             </div>
                         </div>
@@ -180,7 +179,7 @@
                             <div class="name">Phone</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="number" name="phone3">
+                                    <input class="input--style-5" type="number" id="phone3" name="phone3">
                                 </div>
                             </div>
                         </div>
@@ -188,7 +187,7 @@
                             <div class="name">College Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="college3">
+                                    <input class="input--style-5" type="text" id="college3" name="college3">
                                 </div>
                             </div>
                         </div>
@@ -196,7 +195,7 @@
                             <div class="name">College Identification Number (if PES University, SRN)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="srn3">
+                                    <input class="input--style-5" type="text" id="srn3" name="srn3">
                                 </div>
                             </div>
                         </div>
@@ -208,7 +207,7 @@
                             <div class="name">Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="name4">
+                                    <input class="input--style-5" type="text" id="name4" name="name4">
                                 </div>
                             </div>
                         </div>
@@ -216,7 +215,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email4">
+                                    <input class="input--style-5" type="email" id="email4" name="email4">
                                 </div>
                             </div>
                         </div>
@@ -224,7 +223,7 @@
                             <div class="name">Phone</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="number" name="phone4">
+                                    <input class="input--style-5" type="number" id="phone4" name="phone4">
                                 </div>
                             </div>
                         </div>
@@ -232,7 +231,7 @@
                             <div class="name">College Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="college4">
+                                    <input class="input--style-5" type="text" id="college4" name="college4">
                                 </div>
                             </div>
                         </div>
@@ -240,7 +239,7 @@
                             <div class="name">College Identification Number (if PES University, SRN)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="srn4">
+                                    <input class="input--style-5" type="text" id="srn4" name="srn4">
                                 </div>
                             </div>
                         </div>
@@ -256,11 +255,13 @@
     </div>
 
     <!-- Jquery JS-->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
     <!-- Main JS-->
     <script src="../js/swal.js"></script>
+    <script src="../js/robofest_registration_form.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

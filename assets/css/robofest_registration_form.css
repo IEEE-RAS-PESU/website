@@ -752,3 +752,11 @@ nav li a{
       width: 80px;
     }
   }
+
+  @media screen and (max-width: 545px) {
+
+    nav div.container img{
+        width: 100px;
+    }
+
+}
