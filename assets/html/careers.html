@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/67a604eecb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Catamaran', sans-serif;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .form-wrapper>* {
+            width: 100%;
+        }
+
+        .form-wrapper form>* {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 680px) {
+            #content-section {
+                flex-direction: column;
+                gap: 0;
+                margin: 2rem;
+            }
+
+            #landing {
+                height: 100vh;
+            }
+        }
+
+        #landing {
+            background: rgb(243, 243, 243);
+        }
+
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #000;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+
+        .open {
+            transform: rotate(90deg) translateY(0px);
+        }
+
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
+        }
+
+        .open .hamburger-middle {
+            display: none;
+        }
+
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white shadow-md border-b-[3px] border-secondary">
+        <nav class="relative mx-auto text-text-75 w-4/5">
+            <!-- Flex container -->
+            <div class="flex items-center justify-between py-5">
+                <!-- Logo -->
+                <div class="pt-2 flex justify-around items-center gap-10">
+                    <a href="https://pes.edu" class="text-2xl ">
+                        <img class="h-[65px] w-auto" src="../img/pesu-logo.png" alt="" />
+                        <!-- LOGO -->
+                    </a>
+                    <a href="../../index.html" class="text-2xl ">
+                        <img class="h-[65px] w-auto" src="../img/IEEE RAS LOGO (1).png" alt="" />
+                        <!-- LOGO -->
+                    </a>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="hidden pt-2 lg:flex justify-around items-center gap-10">
+                    <a href="../../index.html" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">HOME</a>
+                    <a href="../../index.html#team"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">OUR TEAM</a>
+                    <a href="../html/timeline.html"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">ABOUT US</a>
+                    <a href="../../index.html#contact" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">CONTACT</a>
+                    <a href="../html/learning_path.html" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">EVENTS</a>
+                </div>
+                <!-- Hamburger Icon -->
+                <button id="menu-btn"
+                    class="hamburger lg:hidden focus:outline-none flex flex-col items-center justify-around">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="block lg:hidden">
+                <div id="menu"
+                    class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                    <a href="{% slugurl 'home' %}" class="underline-hover-effect">Home</a>
+                    <a href="{% slugurl 'about-us' %}" class="underline-hover-effect">About Us</a>
+                    <a href="{% slugurl 'projects' %}" class="underline-hover-effect">Projects</a>
+                    <a href="{% slugurl 'blog' %}" class="underline-hover-effect">Blog</a>
+                    <a href="{% slugurl 'contact-us' %}" class="underline-hover-effect">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="landing" class="h-[70vh] flex flex-col justify-start items-center gap-10 text-center pt-40">
+
+        <h1 class="text-6xl font-extrabold w-full md:w-2/3 mx-auto">
+            IEEE RAS PESU Recruitments! Join the official robotics club of PESU.
+        </h1>
+        <p class="w-2/3 mx-auto text-lg">We offer multiple roles under multiple domains, technical and non-technical.
+        </p>
+        <div class="flex justify-center items-center gap-10 w-fit mx-auto">
+            <!-- <a class="px-4 py-2 bg-[#32a852] font-normal rounded flex uppercase justify-center items-center w-fit m-auto gap-4 text-lg cursor-pointer"><span>Domains</span> <i class="fa-solid fa-play"></i></a> -->
+            <a href="#form"
+                class="text-white bg-gradient-to-r text-xl from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2">Application
+                Form</a>
+        </div>
+    </div>
+    <section class="py-10">
+        <h1 class="text-5xl text-center font-extrabold">
+            Domains
+        </h1>
+        <div class="w-4/5 mx-auto mt-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 my-20">
+                <div class="flex justify-start items-center">
+                    <img src="../img/robot-animate.svg" alt="" class="h-[500px] w-auto">
+                </div>
+                <div class="flex flex-col justify-start items-start">
+                    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Technical</span>
+                        Domain Roles</h1>
+                    <div class="my-5 flex flex-col gap-10">
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Web Development</h2>
+                            <ul class="list-disc flex flex-col gap-5 ml-10">
+                                <li class="text-lg">Front End Development : Using knowledge of UI/UX Dev, HTML, CSS,
+                                    tailwind and React/Equivalent Framework to align web design and user experience
+                                    requirement</li>
+                                <li class="text-lg">Back end Development : Quality command over HTML, CSS, tailwind,
+                                    JavaScript, Python, Django, Django Rest Framework, REST APIs, Devops tools (git,
+                                    docker, CI/CD - optional)</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Virtual Lab Student Body</h2>
+                            <ul class="list-disc flex flex-col gap-5 ml-10">
+                                <li class="text-lg">Server Admin : Retrieval of data from the server (RPI and the server
+                                    computer)</li>
+                                <li class="text-lg">Arduino Expert : Expertise in Arduino.</li>
+                                <li class="text-lg">ROS Developer : using basic knowledge of ROS that is to be
+                                    implemented on the bots in the virtual lab </li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">CAD Modelling</h2>
+                            <p class="text-lg">Design, Analysis and Modelling based on industry standards using
+                                SolidWorks, Fusion 360 and Ansys. Relevant for students looking for job opportunities in
+                                the field of design, modelling and simulation engineer or a full stack mechatronics
+                                developer</p>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Student Mentors</h2>
+                            <p class="text-lg">This team will be representing PESU at various national and international
+                                robotics competitions. Mentorship, components and other requirements will be provided.
+                            </p>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Competition Team</h2>
+                            <p class="text-lg">Mentoring student projects and conducting technical workshops and
+                                seminars </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 my-20">
+
+                <div class="flex flex-col justify-start items-start">
+                    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Management</span>
+                        Domain Roles</h1>
+                    <div class="my-5 flex flex-col gap-10">
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Operations</h2>
+                            <ul class="list-disc flex flex-col gap-5 ml-10">
+                                <li class="text-lg">Finalising event dates and venues by analysing the calendar of
+                                    events</li>
+                                <li class="text-lg">coordinating with the respective authorities to get permissions etc
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Events and Logistics</h2>
+                            <p class="text-lg">Creative and innovative approach to come up with club events by having a
+                                sound knowledge of current developments in the robotics industry</p>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Sponsorship</h2>
+                            <ul class="list-disc flex flex-col gap-5 ml-10">
+                                <li class="text-lg">Acquire premier sponsors by being confident and well-connected</li>
+                                <li class="text-lg">Use strong conversational ability to sea the deal!</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Creatives</h2>
+                            <p class="text-lg">Formulation and implementation of originative and novel themes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end items-center">
+                    <img src="../img/manage.svg" alt="" class="h-[400px] w-auto">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 my-20">
+                <div class="flex justify-start items-center">
+                    <img src="../img/social.svg" alt="" class="h-[400px] w-auto">
+                </div>
+                <div class="flex flex-col justify-start items-start">
+                    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Social
+                            Media</span>
+                        Domain Roles</h1>
+                    <div class="my-5 flex flex-col gap-10">
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Content Curation</h2>
+                            <ul class="list-disc flex flex-col gap-5 ml-10">
+                                <li class="text-lg">Content Writer : Closing in on innovative content for our social
+                                    media and on-campus posters</li>
+                                <li class="text-lg">Social Media Manager : Managing our official handles on Instagram
+                                    and LinkedIn
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Marketing</h2>
+                            <ul class="list-disc flex flex-col gap-5 ml-10">
+                                <li class="text-lg">Strategising effectively to increase reach on social media</li>
+                                <li class="text-lg">Ingenious and creative approach to market events both small and big
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 my-20">
+                <div class="flex flex-col justify-start items-start">
+                    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Creativity</span>
+                        Domain Roles</h1>
+                    <div class="my-5 flex flex-col gap-10">
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Design</h2>
+                            <p class="text-lg">Designing posters, presentations and social media posts in the most ingenious way possible</p>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Photography</h2>
+                            <p class="text-lg">Capture the best moments during events.</p>
+                        </div>
+                        <div class="">
+                            <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Video Editing</h2>
+                            <p class="text-lg">Editing videos for our social media handles.</p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="flex justify-end items-center">
+                    <img src="../img/design.svg" alt="" class="h-[400px] w-auto">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="form">
+        <div class="">
+            <h1 class="text-5xl text-center font-extrabold">Application Form</h1>
+        </div>
+        <div class="">
+            <div class="w-full md:w-4/5 mx-auto bg-[#f3f4f6] shadow-lg p-20 my-40 rounded-lg">
+                <form id="form-main" method="post"
+                    action="https://script.google.com/macros/s/AKfycbwoPYgEQ_rcYtxTxVG1tKR-kjPBetQ_XsbG6AJpiqkIvvtRNlWDYG9f6myOFcPoWG0H/exec"
+                    class="flex flex-col gap-20 w-[100%]">
+                    <div class="xl:grid flex flex-col xl:grid-cols-3 gap-10 w-full">
+                        <h2 class="col-span-1 text-2xl font-normal">
+                            Personal Details
+                        </h2>
+                        <div
+                            class="col-span-2 bg-white w-full rounded shadow-md p-10 flex flex-col justify-start items-start gap-10">
+                            <div class="w-full">
+                                <label for="fullname" class="block mb-2 text-lg font-medium text-gray-900">Full
+                                    Name</label>
+                                <input placeholder="Full Name" type="text" name="name"
+                                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5"
+                                    required>
+                            </div>
+                            <div class="w-full">
+                                <label for="srn" class="block mb-2 text-lg font-medium text-gray-900">SRN</label>
+                                <input placeholder="PES1UG21.." type="text" name="SRN"
+                                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5"
+                                    required>
+                            </div>
+                            <div class="w-full">
+                                <label class="block mb-2 text-lg font-medium text-gray-900" for="dpt">
+                                    Department
+                                </label>
+                                <div class="relative">
+                                    <select required
+                                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                        id="grid-state" name="department">
+                                        <option>CSE</option>
+                                        <option>ECE</option>
+                                        <option>ME</option>
+                                        <option>EEE</option>
+                                        <option>CE</option>
+                                        <option>BT</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <label for="year" class="block mb-2 text-lg font-medium text-gray-900">Year of
+                                    study</label>
+                                <input placeholder="1/2/3/4" type="number" name="year"
+                                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5"
+                                    required>
+                            </div>
+                            <div class="w-full">
+                                <label for="email" class="block mb-2 text-lg font-medium text-gray-900">Email</label>
+                                <input placeholder="name@domain.com" type="email" name="email"
+                                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5"
+                                    required>
+                            </div>
+                            <div class="w-full">
+                                <label for="phone" class="block mb-2 text-lg font-medium text-gray-900">Phone
+                                    Number</label>
+                                <input placeholder="Cell Phone Number" type="text" name="phone"
+                                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:grid flex flex-col xl:grid-cols-3 gap-10 w-full">
+                        <h2 class="col-span-1 text-2xl font-normal">
+                            Resume
+                        </h2>
+                        <div class="col-span-2 bg-white rounded shadow-md p-10 flex flex-col justify-start items-start gap-10 w-full"
+                            id="">
+                            <div class="w-full">
+                                <label class="block mb-2 text-lg font-medium text-gray-900" for="resume">
+                                    Link to your resume
+                                </label>
+                                <input type="text" name="resume"
+                                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="xl:grid flex flex-col xl:grid-cols-3 gap-10 w-full">
+                        <h2 class="col-span-1 text-2xl font-normal">
+                            Preference 1
+                        </h2>
+                        <div class="col-span-2 bg-white rounded shadow-md p-10 flex flex-col justify-start items-start gap-10 w-full"
+                            id="">
+                            <div class="w-full">
+                                <label class="block mb-2 text-lg font-medium text-gray-900" for="Role">
+                                    Role
+                                </label>
+                                <div class="relative">
+                                    <select required
+                                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                        id="select-p-1" name="preference-1">
+                                        <option value="default" selected disabled>Default</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Virtual Lab Student Body">Virtual Lab Student Body</option>
+                                        <option value="CAD Modelling">CAD Modelling</option>
+                                        <option value="Competition Team">Competition Team</option>
+                                        <option value="Operations">Operations</option>
+                                        <option value="Events and Logistics">Events and Logistics</option>
+                                        <option value="Content Curation">Content Curation</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Sponsorship">Sponsorship</option>
+                                        <option value="Design">Design</option>
+                                        <option value="Creatives">Creatives</option>
+                                        <option value="Photography">Photography</option>
+                                        <option value="Video Editing">Video Editing</option>
+
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="flex flex-col justify-start items-start gap-10 w-full" id="form-p-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:grid flex flex-col xl:grid-cols-3 gap-10 w-full">
+                        <h2 class="col-span-1 text-2xl font-normal">
+                            Preference 2
+                        </h2>
+                        <div class="col-span-2 bg-white rounded shadow-md p-10 flex flex-col justify-start items-start gap-10 w-full"
+                            id="">
+                            <div class="w-full">
+                                <label class="block mb-2 text-lg font-medium text-gray-900" for="Role">
+                                    Role
+                                </label>
+                                <div class="relative">
+                                    <select required
+                                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                        id="select-p-2" name="preference-2">
+                                        <option value="default" selected disabled>Default</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Virtual Lab Student Body">Virtual Lab Student Body</option>
+                                        <option value="CAD Modelling">CAD Modelling</option>
+                                        <option value="Competition Team">Competition Team</option>
+                                        <option value="Operations">Operations</option>
+                                        <option value="Events and Logistics">Events and Logistics</option>
+                                        <option value="Content Curation">Content Curation</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Sponsorship">Sponsorship</option>
+                                        <option value="Design">Design</option>
+                                        <option value="Creatives">Creatives</option>
+                                        <option value="Photography">Photography</option>
+                                        <option value="Video Editing">Video Editing</option>
+
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="flex flex-col justify-start items-start gap-10 w-full" id="form-p-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:grid flex flex-col xl:grid-cols-3 gap-10 w-full">
+                        <h2 class="col-span-1 text-2xl font-normal">
+                            Preference 3
+                        </h2>
+                        <div class="col-span-2 bg-white rounded shadow-md p-10 flex flex-col justify-start items-start gap-10 w-full"
+                            id="">
+                            <div class="w-full">
+                                <label class="block mb-2 text-lg font-medium text-gray-900" for="Role">
+                                    Role
+                                </label>
+                                <div class="relative">
+                                    <select required
+                                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                        id="select-p-3" name="preference-3">
+                                        <option value="default" selected disabled>Default</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Virtual Lab Student Body">Virtual Lab Student Body</option>
+                                        <option value="CAD Modelling">CAD Modelling</option>
+                                        <option value="Competition Team">Competition Team</option>
+                                        <option value="Operations">Operations</option>
+                                        <option value="Events and Logistics">Events and Logistics</option>
+                                        <option value="Content Curation">Content Curation</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Sponsorship">Sponsorship</option>
+                                        <option value="Design">Design</option>
+                                        <option value="Creatives">Creatives</option>
+                                        <option value="Photography">Photography</option>
+                                        <option value="Video Editing">Video Editing</option>
+
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="flex flex-col justify-start items-start gap-10 w-full" id="form-p-3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="text-white bg-gradient-to-r text-xl from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2">
+                        <span>Submit</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full bg-[#222] text-gray-50 p-5">
+        <div class="flex flex-col justify-center items-center">
+            <p>© IEEE RAS PESU&nbsp;2021. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="assets/html/faq.html">FAQ</a></li>
+            </ul>
+            <p>Made with <i class="fa fa-heart"></i> by <span style="color: #fdcc52;">IEEE RAS PESU Web Dev Team</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const profLabelFor = "proficiency"
+
+        const technicalCommonQuestions = () => {
+            return checkboxInput(
+                "The tech stack you are proficient in",
+                "The tech stack you are proficient in",
+                [
+                    "Arduino IDE",
+                    "Image Processing OpenCV",
+                    "MATLAB",
+                    "Fusion360/SolidWorks/Ansys/Blender",
+                    "Tensorflow/PyTorch",
+                    "Raspberry Pi",
+                    "Robotic Operating System",
+                    "Sensor Integration",
+                    "PCB Design",
+                ]
+            ) + textAreaInput(
+                "What do you understand by PWM? How many PWM pins does an Arduino have?",
+                "What do you understand by PWM? How many PWM pins does an Arduino have?",
+            ) + textAreaInput(
+                "How do you convert RGB Image to Grayscale in OpenCV?",
+                "How do you convert RGB Image to Grayscale in OpenCV?",
+            ) + textAreaInput(
+                "In your own words, describe what makes up an AMR.",
+                "In your own words, describe what makes up an AMR.",
+            )
+        }
+
+        const roleInputs = {
+            "Web Development": () => {
+                return textAreaInput("The tech stack you are proficient in", "web dev proficiency", "HTML, JS, etc...") + textAreaInput(
+                    "Describe one of your most complicated web development projects and its explaining the tech stack.",
+                    "Describe one of your most complicated web development projects and its explaining the tech stack."
+                ) +
+                textAreaInput(
+                    "Whats the difference between using vanilla JS and a framework such as react? Bonus: How is react/vue different from NextJs/Nuxtjs ?",
+                    "Whats the difference between using vanilla JS and a framework such as react? Bonus: How is react/vue different from NextJs/Nuxtjs ?"
+                ) + textAreaInput(
+                    "What is a CMS ? Have you used one before and how is it useful ?",
+                    "What is a CMS ? Have you used one before and how is it useful ?"
+                )
+            },
+            "Virtual Lab Student Body": technicalCommonQuestions,
+            "CAD Modelling": () => {
+                return textInput(
+                    "Link a render/step file of your best work.",
+                    "Render/Step File"
+                )
+            },
+            "Competition Team": technicalCommonQuestions,
+            "Student Mentors": technicalCommonQuestions,
+            "Operations": () => {
+                return textAreaInput(
+                    "What do you think goes behind planning a successful event?",
+                    "What do you think goes behind planning a successful event?"
+                )
+            },
+            "Events and Logistics": () => {
+                return textAreaInput(
+                    "What do you think goes behind planning a successful event?",
+                    "What do you think goes behind planning a successful event?"
+                )
+            },
+            "Design": () => {
+                return textInput("Link a recent design work of yours that defines you", "Link a recent design work of yours that defines you")
+            },
+            "Content Curation": () => {
+                return textAreaInput(
+                    "Provide links to blogs",
+                    "Provide links to blogs",
+                ) + textAreaInput(
+                    "Add your recent content curation work in the textbox",
+                    "Add your recent content curation work in the textbox",
+                )
+            },
+            "Creatives": () => {
+                return textAreaInput(
+                    "Ideate an original, relevant theme you would implement in Robofest 3.0 to attract a huge audience",
+                    "Ideate an original, relevant theme you would implement in Robofest 3.0 to attract a huge audience",
+                )
+            },
+            "Marketing": () => {
+                return textAreaInput(
+                    "Describe some marketing strategies you would implement offline and online to promote Robofest 3.0.",
+                    "Describe some marketing strategies you would implement offline and online to promote Robofest 3.0."
+                )
+            },
+            "Sponsorship": () => {
+                return textAreaInput(
+                    "What is the process you would follow to reach out to a sponsor?",
+                    "What is the process you would follow to reach out to a sponsor?"
+                )
+            },
+            "Photography": () => {
+                return textInput("Link your best photography work", "Link your best photography work")
+            },
+            "Video Editing": () => {
+                return textInput("Link your best video editing work", "Link your best video editing work")
+            },
+
+        }
+
+        const checkboxInput = (label, labelFor, choices) => {
+            console.log(choices)
+            let html = `<div> <label for="${labelFor}" class="block mb-2 text-lg font-medium text-gray-900">${label}</label>`
+            choices.forEach(choice => {
+                html += `
+                <div>
+                    <input type="checkbox" name="${labelFor}" value="${choice}" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                    <label for="${choice}">${choice}</label>
+                </div>
+                `
+            })
+
+            html += "</div>"
+            html += textAreaInput(
+                "Other", "other", "3D Printing, etc...", false
+            )
+
+            return html
+        }
+
+        const textAreaInput = (label, labelFor, placeholder = "", required = true) => {
+            return `
+            <div class="w-full">
+                <label for="${labelFor}" class="block mb-2 text-lg font-medium text-gray-900">${label}</label>
+                <textarea rows="5" placeholder="${placeholder}" type="text" name="${labelFor}"
+                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5" ${required ? 'required' : ''}></textarea>
+            </div>
+            `
+        }
+
+        const textInput = (label, labelFor, placeholder = "", required = true) => {
+            return `
+            <div class="w-full">
+                <label for="${labelFor}" class="block mb-2 text-lg font-medium text-gray-900">${label}</label>
+                <input placeholder="${placeholder}" type="text" name="${labelFor}"
+                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5" ${required ? 'required' : ''}>
+            </div>
+            `
+        }
+
+        const fileInput = (label, labelFor) => {
+            return `
+            <div class="w-full">
+                <label for="${labelFor}" class="block mb-2 text-lg font-medium text-gray-900">${label}</label>
+                <input type="file" name="${labelFor}"
+                    class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5">
+            </div>
+            `
+        }
+
+        const selectP1 = document.getElementById("select-p-1")
+        const formP1 = document.getElementById("form-p-1")
+
+        selectP1.addEventListener('change', e => {
+            const pref = e.target.value
+            formP1.innerHTML = ""
+            formP1.insertAdjacentHTML("beforeend", roleInputs[pref]())
+        })
+
+        const selectP2 = document.getElementById("select-p-2")
+        const formP2 = document.getElementById("form-p-2")
+
+        selectP2.addEventListener('change', e => {
+            const pref = e.target.value
+            formP2.innerHTML = ""
+            formP2.insertAdjacentHTML("beforeend", roleInputs[pref]())
+        })
+
+        const selectP3 = document.getElementById("select-p-3")
+        const formP3 = document.getElementById("form-p-3")
+
+        selectP3.addEventListener('change', e => {
+            const pref = e.target.value
+            formP3.innerHTML = ""
+            formP3.insertAdjacentHTML("beforeend", roleInputs[pref]())
+        })
+
+
+        const btn = document.getElementById('menu-btn')
+        const nav = document.getElementById('menu')
+
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('open')
+            nav.classList.toggle('flex')
+            nav.classList.toggle('hidden')
+        })
+
+        const form = document.getElementById('form-main');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                if (confirm('Application Submitted!')) {
+                    window.location.reload();
+                }
+            })
+
+        })
+    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+</body>
+
+</html>
