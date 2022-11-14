@@ -25,6 +25,13 @@
 
         #landing {
             background: rgb(243, 243, 243);
+            background: #111;
+            background: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)), url("../img/space.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            background-position: center;
         }
 
         .hamburger {
@@ -93,13 +100,16 @@
 
                 <!-- Menu Items -->
                 <div class="hidden pt-2 lg:flex justify-around items-center gap-10">
-                    <a href="../../index.html" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">HOME</a>
+                    <a href="../../index.html"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">HOME</a>
                     <a href="../../index.html#team"
                         class="underline-hover-effect uppercase font-semibold hover:text-gray-500">OUR TEAM</a>
                     <a href="../html/timeline.html"
                         class="underline-hover-effect uppercase font-semibold hover:text-gray-500">ABOUT US</a>
-                    <a href="../../index.html#contact" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">CONTACT</a>
-                    <a href="../html/learning_path.html" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">EVENTS</a>
+                    <a href="../../index.html#contact"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">CONTACT</a>
+                    <a href="../html/learning_path.html"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">EVENTS</a>
                 </div>
                 <!-- Hamburger Icon -->
                 <button id="menu-btn"
@@ -114,19 +124,22 @@
             <div class="block lg:hidden">
                 <div id="menu"
                     class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                    <a href="../../index.html" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">HOME</a>
+                    <a href="../../index.html"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">HOME</a>
                     <a href="../../index.html#team"
                         class="underline-hover-effect uppercase font-semibold hover:text-gray-500">OUR TEAM</a>
                     <a href="../html/timeline.html"
                         class="underline-hover-effect uppercase font-semibold hover:text-gray-500">ABOUT US</a>
-                    <a href="../../index.html#contact" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">CONTACT</a>
-                    <a href="../html/learning_path.html" class="underline-hover-effect uppercase font-semibold hover:text-gray-500">EVENTS</a>
+                    <a href="../../index.html#contact"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">CONTACT</a>
+                    <a href="../html/learning_path.html"
+                        class="underline-hover-effect uppercase font-semibold hover:text-gray-500">EVENTS</a>
                 </div>
             </div>
         </nav>
     </header>
-    <section id="landing" class="h-[60vh] flex flex-col justify-start items-center gap-10 text-center py-20 mb-20">
-
+    <section id="landing"
+        class="h-[70vh] flex flex-col justify-start items-center gap-10 text-center flex flex-col justify-center items-center mb-20">
         <h1 class="text-4xl font-extrabold w-4/5 md:w-2/3 md:text-6xl mx-auto">
             IEEE RAS PESU Recruitments! Join the official robotics club of PESU.
         </h1>
@@ -273,7 +286,8 @@
                     <div class="my-5 flex flex-col gap-10">
                         <div class="">
                             <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Design</h2>
-                            <p class="text-lg">Designing posters, presentations and social media posts in the most ingenious way possible</p>
+                            <p class="text-lg">Designing posters, presentations and social media posts in the most
+                                ingenious way possible</p>
                         </div>
                         <div class="">
                             <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Photography</h2>
@@ -283,8 +297,8 @@
                             <h2 class="mb-4 text-lg font-bold text-gray-900 md:text-lg">Video Editing</h2>
                             <p class="text-lg">Editing videos for our social media handles.</p>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
                 <div class="flex justify-end items-center">
@@ -523,8 +537,8 @@
                         </div>
                     </div>
 
-                    <button type="submit"
-                        class="text-white bg-gradient-to-r text-xl from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2">
+                    <button id="submit-btn" type="submit"
+                        class="flex justify-center items-center text-white bg-gradient-to-r text-xl from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2">
                         <span>Submit</span>
                     </button>
                 </form>
@@ -579,13 +593,13 @@
                     "Describe one of your most complicated web development projects and its explaining the tech stack.",
                     "Describe one of your most complicated web development projects and its explaining the tech stack."
                 ) +
-                textAreaInput(
-                    "Whats the difference between using vanilla JS and a framework such as react? Bonus: How is react/vue different from NextJs/Nuxtjs ?",
-                    "Whats the difference between using vanilla JS and a framework such as react? Bonus: How is react/vue different from NextJs/Nuxtjs ?"
-                ) + textAreaInput(
-                    "What is a CMS ? Have you used one before and how is it useful ?",
-                    "What is a CMS ? Have you used one before and how is it useful ?"
-                )
+                    textAreaInput(
+                        "Whats the difference between using vanilla JS and a framework such as react? Bonus: How is react/vue different from NextJs/Nuxtjs ?",
+                        "Whats the difference between using vanilla JS and a framework such as react? Bonus: How is react/vue different from NextJs/Nuxtjs ?"
+                    ) + textAreaInput(
+                        "What is a CMS ? Have you used one before and how is it useful ?",
+                        "What is a CMS ? Have you used one before and how is it useful ?"
+                    )
             },
             "Virtual Lab Student Body": technicalCommonQuestions,
             "CAD Modelling": () => {
@@ -734,9 +748,20 @@
             nav.classList.toggle('hidden')
         })
 
+        const submitBtn = document.getElementById("submit-btn")
+
         const form = document.getElementById('form-main');
         form.addEventListener("submit", e => {
             e.preventDefault();
+            submitBtn.innerHTML = `
+            <div role="status">
+                <svg aria-hidden="true" class="mr-2 w-8 h-8 text-white animate-spin fill-[#111]" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                    <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                </svg>
+                <span class="sr-only">Loading...</span>
+            </div>
+            `
             const data = new FormData(form);
             const action = e.target.action;
             fetch(action, {
@@ -745,6 +770,7 @@
             }).then(() => {
                 if (confirm('Application Submitted!')) {
                     window.location.reload();
+                    window.scrollTo(0, 0)
                 }
             })
 
